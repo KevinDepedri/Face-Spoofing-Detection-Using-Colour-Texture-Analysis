@@ -1,0 +1,11 @@
+The algorithm was trained on a single person of our group (so we don't assure the generalization of the system as we will discuss during the presentation of our project). 
+If you want to test the code you can follow the following steps:
+- run "main"
+- Here you have multiple choices to test the algorithm.
+  .To test the "eye blinking" part, you can use any image of a face that you want (you can also use the image "face_detected_true" that can be found within the directory). 
+   Put it on an external device and show it to the webcam (after 30 seconds the result "Fake face" will be returned due to missed blinking).
+  .To test the feature extraction and SVM part, you can either use "face_detected_fake" or "face_detected_true" and substitute line 39 of the main program with one of them.
+   In this case even if the system captures a certain face, it will use the one that we have provided to you. Thanks to that you will be able to test that the system returns true/false
+   depending on the type of image you use.
+  .During the discussion of the project, we will show you the result obtained by putting the person used for training the system in front of the camera.
+  

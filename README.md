@@ -16,7 +16,7 @@ The execution of the code is divided in phases as follows:
     - If a eye-blink is detected, a picture of the subject if front of the camera is acquired. 
 2. After the eye-blink check, the acquired image is used to start the histogram-analysis phase of the algorithm
     - First, the input image is converted into both YCbCr and HSV color spaces, and each single channel is extracted
-    - Then, for each channel extracted, the CoALBP and the LPQs descriptors are computed and concatenated (LPQ is computed each time under 3 different settings)
+    - Then, for each channel extracted, the CoALBPs and the LPQ descriptors are computed and concatenated (CoALBP is computed each time under 3 different settings)
     - Finally, the descriptors of each channel (obtained in the previous step) are concatenated to build the final image descriptor
 3. In the end, the final image descriptor is fed to a SVM-binary-classifier (trained on our personal dataset) that classifies the input image as Fake (Presentation Attack) or Real (Real User).
 
@@ -32,18 +32,25 @@ To build the virtual environment follow the next few steps
   git clone https://github.com/KevinDepedri/Face-Spoofing-Detection-Using-Colour-Texture-Analysis
   cd Face-Spoofing-Detection-Using-Colour-Texture-Analysis
   ```
-  2. Launch a terminal instance from inside the folder
-  3. Run the ``build_environment.sh`` file to start building the environment
-  ```shell
-  bash ./build_environment.sh
-  ```
+  2. Launch a terminal instance from inside the folder and run the following commands to start building the environment
+  - On windows
+      ```shell
+      python -m venv
+      venv/Scripts/pip install -r requirements.txt
+      ```
+  - On UNIX 
+      ```shell
+      python3ve  -m venv 
+      venv/bin/pip install -r requirements.txt
+      ```
   
 ****
 # Running the code
 To run the code, once the virtual environment has been built, you will need to
   1. Activate the virtual environment
   ```shell
-  ./venv/Scripts/activate
+  ./venv/Scripts/activate        # if on Windows
+  source ./venv/bin/activate     # if on Unix
   ```
   2. Once the name of the environment is shown at the beginning of the current line in the terminal, then run the code
   ```shell

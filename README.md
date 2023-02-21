@@ -35,12 +35,12 @@ To build the virtual environment follow the next few steps
   2. Launch a terminal instance from inside the folder and run the following commands to start building the environment
   - On windows
       ```shell
-      python -m venv
+      python -m venv venv
       venv/Scripts/pip install -r requirements.txt
       ```
   - On UNIX 
       ```shell
-      python3ve  -m venv 
+      python3ve -m venv venv
       venv/bin/pip install -r requirements.txt
       ```
   

@@ -40,7 +40,7 @@ To build the virtual environment follow the next few steps
       ```
   - On UNIX 
       ```shell
-      python3ve -m venv venv
+      python3 -m venv venv
       venv/bin/pip install -r requirements.txt
       ```
   

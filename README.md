@@ -32,7 +32,7 @@ To build the virtual environment follow the next few steps
   git clone https://github.com/KevinDepedri/Face-Spoofing-Detection-Using-Colour-Texture-Analysis
   cd Face-Spoofing-Detection-Using-Colour-Texture-Analysis
   ```
-  2. Launch a terminal instance from inside the folder and run the following commands to start building the environment
+  2. From terminal run the following commands to start building the environment
   - On windows
       ```shell
       python -m venv venv
